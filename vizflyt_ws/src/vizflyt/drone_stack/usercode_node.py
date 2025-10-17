@@ -8,9 +8,9 @@ from vicon_receiver.msg import Position
 from cv_bridge import CvBridge
 import numpy as np
 
-from quad_simulation.Planner import Planner
-from quad_simulation.StudentPerception import StudentPerception
-from quad_simulation.StudentPlanning import StudentMotionPlanning
+from drone_stack.Planner import Planner
+from drone_stack.StudentPerception import StudentPerception
+from drone_stack.StudentPlanning import StudentMotionPlanning
 from rclpy.qos import QoSProfile, ReliabilityPolicy
 
 class StateMachines(Node):
@@ -49,7 +49,7 @@ class StateMachines(Node):
         self.bridge = CvBridge()
 
         # Initialize Perception and Motion Planning
-        perception = StudentPerception()
+        perception = StudentPerception("vizflyt/drone_stack/unet_150.pth")
         motion_planning = StudentMotionPlanning()
         self.planner = Planner(mode="velocity", perception_module=perception, motion_planning_module=motion_planning)
 

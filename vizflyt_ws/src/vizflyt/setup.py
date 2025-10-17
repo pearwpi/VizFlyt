@@ -33,7 +33,7 @@ setup(
             'cam_feed_node = vizflyt.cam_feed_node:main',
             'collision_detection_node = vizflyt.collision_detection_node:main',
             'quad_simulator_node = quad_simulation.quad_simulator_node:main',
-            'usercode_node = quad_simulation.usercode_node:main',             
+            'usercode_node = drone_stack.usercode_node:main',             
         ],
     },
 )

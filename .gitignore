@@ -6,7 +6,7 @@ vizflyt_ws/src/vizflyt_viewer/outputs/
 vizflyt_ws/build/
 vizflyt_ws/install/
 vizflyt_ws/log/
-vizflyt_ws/src/quad_simulation/__pycache__
+vizflyt_ws/src/debug/
 blender-sim/
 # Ignore specific file types
 *.log
@@ -27,3 +27,7 @@ __pycache__/
 .env
 venv/
 *.venv
+.vizflyt
+
+*.mp4
+*.pth
